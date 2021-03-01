@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Joe's hotdogs online order</title>
+	<link rel="stylesheet" type="text/css" href="joeshotdogsstylesheet.css">
+</head>
+<body>
+
+
+	<div class ="intro">Joe's Hotdog Stand</div>
+	<div class ="message">Thank you for visiting us today!</div>
+
+	<div class="body-container">
+		<div class="columnleft">
+			<script language="javascript">
+				 hotDog = prompt ("how many hotdog(s)?");
+				 frenchFry = prompt ("how many French Fries(s)?");
+				 Drink = prompt ("how many Drink(s)?");
+
+				let hotDogTotal = (hotDog)* 3.25;
+				let frenchFryTotal = (frenchFry)* 2.00;
+				let drinkTotal = (Drink)*1.50;
+				let subtotal = hotDogTotal+frenchFryTotal+drinkTotal;
+
+				document.write ("Number of Hotdogs(s) ordered: "+ hotDog );
+				document.write("<br>");
+				document.write ("Hotdogs total cost: $"+ hotDogTotal.toFixed(2));
+				document.write("<br>");
+
+				document.write("<br>");
+				document.write ("Number of French Fries(s) ordered: "+ frenchFry);
+				document.write("<br>");
+				document.write ("French Fries total cost: $"+ frenchFryTotal.toFixed(2));
+				document.write("<br>");
+
+				document.write("<br>");
+				document.write ("Number of Drinks(s) ordered: "+ Drink );
+				document.write("<br>");
+				document.write ("Drinks(s) total cost: $"+ drinkTotal.toFixed(2));
+
+			</script>
+		</div>
+		<div class="columnright">
+			<script language="javascript">
+				document.write ("Subtotal: $"+ subtotal.toFixed(2));
+				document.write("<br>");
+
+
+				if (subtotal >= 20.00){
+					joeDiscount = (subtotal)*0.90;
+					totalwTaxnDiscount = (joeDiscount)*1.0625; 
+					document.write ("Discounted price (10% off $20 or more): $"+ joeDiscount.toFixed(2));
+					document.write("<br>");
+					document.write ("Total with Tax: $"+ totalwTaxnDiscount.toFixed(2));
+					document.write("<br>");
+				}
+					else{
+						totalwTax = (subtotal)*1.0625
+						document.write ("Total with Tax: $"+ totalwTax.toFixed(2));
+						}
+			</script>
+		</div> 
+	</div>
+
+</body>
+</html>
